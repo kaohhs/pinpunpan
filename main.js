@@ -1,11 +1,15 @@
 const express = require('express');
 const { handlebars } = require('hbs');
 
+
 require ('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT;
 const hbs = require('hbs');
+const { urlencoded } = require('express');
+
+// middlewares
 
 
 
@@ -78,6 +82,12 @@ app.get('*', (req, res) => {
   }
 })
 
+
+app.post("/registro"), (req, res) => {
+
+  console.log(req.body)
+  res.send('recibido')
+}
 
 app.listen(PORT, () => {
         console.log(`Usando el puerto http://localhost:${PORT}`);
