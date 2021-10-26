@@ -4,7 +4,7 @@ const { handlebars } = require('hbs');
 require ('dotenv').config();
 
 const app = express();
-const port = process.env.port;
+const PORT = process.env.PORT;
 const hbs = require('hbs');
 
 
@@ -79,6 +79,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(port, () => {
-        console.log(`Usando el puerto http://localhost:${port}`);
+app.listen(PORT, () => {
+        console.log(`Usando el puerto http://localhost:${PORT}`);
 });
