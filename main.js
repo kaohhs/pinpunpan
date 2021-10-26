@@ -11,6 +11,9 @@ const { urlencoded } = require('express');
 
 // middlewares
 
+app.use(express.json());
+app.use( express.urlencoded({extended: false}))
+
 
 
 //handlebars
