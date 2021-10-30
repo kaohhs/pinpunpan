@@ -1,0 +1,424 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#container404 h1 {
+  display: center;
+  text-align: center;
+  
+  color: white;
+  border-width: 2%;
+  border: solid 15px;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border-width: 3px;
+  background-color: rgb(163, 120, 120);
+  
+}
+
+
+
+
+.navbar-brand img {
+  display: flex;
+  border-radius: 3rem;
+  border-color: lawngreen;
+  background-size: contain;
+  flex-wrap: wrap-reverse;
+}
+
+.navbarHome img {
+  border-radius: 1rem;
+  border-color: grey;
+}
+
+#cardContacto  {
+  justify-content: center;
+  background-image: url(/images/banner-header.png);
+  background-color: black;
+  padding-left: 1px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-emphasis-color: white;
+  
+}
+
+.checkbox {
+  display: center;
+}
+
+#card-header {
+  display: none;
+}
+
+
+#textosuperior a {
+  align-items: flex-start;
+  size: 1rem;
+  text-align-last: center;
+  border-color: royalblue;
+  border-width: 2%;
+  border: solid 15px;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border-width: 3px;
+  border-color: #746c6b;
+  align-content: flex-start;
+}
+
+#maparesponsive {
+  align-content: flex-start;
+  padding: 0%;
+  margin: 0%;
+  padding-left: 0%;
+  border-radius: 5px, color #746c6b;
+}
+
+header .navbarHome {
+  font: bold;
+  font-weight: bold;
+  lighting-color: blue;
+  font-size: 25px;
+  align-content: flex-end;
+  padding: 15px;
+  
+  
+}
+
+a {
+  background-color: rgb(163, 120, 120);
+  transition: background-color 0.5s;
+}
+
+header text {
+  justify-content: space-between;
+}
+
+a:hover {
+  background-color: rgb(116, 108, 107);
+}
+
+.navbar-var {
+  justify-content: space-between;
+  font-size: large;
+  color: black;
+  
+}
+
+body {
+  background-image: url(../images/harina.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2px;
+}
+
+.carousel-inner img {
+  display: flex;
+  width: 100%;
+  max-height: 460px;
+}
+
+.carousel-inner {
+  height: 200px;
+}
+
+footer {
+  font-weight: bold;
+  padding-top: 50px;
+  text-align: end;
+  opacity: 100%;
+  font-family: "Roboto", sans-serif;
+  align-content: center;
+  color: white;
+  size: 2rem;
+}
+
+/* ---TABLETAS */
+@media (min-width: 768px) {
+  body {
+    background-color: rgb(0, 0, 0);
+  }
+  .carousel-inner img {
+    display: flex;
+    width: 100%;
+    max-height: 460px;
+  }
+
+  .carousel-inner {
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .boton {
+    align-items: center;
+    align-content: center;
+    padding-left: 0%;
+    padding-top: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-group img {
+    display: flex;
+    background-image: url(../images/cafemolido2.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    object-fit: cover;
+    max-height: 350px;
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-group{
+    display: flex;
+    object-fit: cover;
+    min-width: none;
+    max-height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-group {
+    display: flex;
+  }
+}
+
+/* ----ESCRITORIO NORMAL----- */
+
+@media (min-width: 1000px) {
+  #opcionessuperiores {
+    color: black;
+    text-decoration: underline;
+    font-size: 50px;
+    border-radius: 3rem;
+  }
+}
+
+.suscripcionmail {
+  padding-top: 3rem;
+
+  align-content: stretch;
+  justify-content: space-between;
+}
+@media (min-width: 1000px) {
+}
+
+@media (min-width: 1000px) {
+  body {
+    display: content;
+    align-content: flex-end;
+    background-color: rgb(0, 0, 0);
+  }
+}
+.carousel-inner img {
+  max-height: 200px;
+  width: 100%;
+  max-height: 10%;
+}
+
+.carousel-inner {
+  height: 200px;
+}
+@media (min-width: 1000px) {
+  .container1 {
+    display: flex;
+    align-content: space-between;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card-img-top {
+    align-self: auto;
+    align-content: space-between;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .boton {
+    display: flex;
+    align-content: center;
+    font-size: 18px;
+    border-width: 5rem;
+    min-block-size: 3rem;
+    width: 300px;
+  }
+}
+.heading {
+  size: larger;
+}
+
+.suscripcionmail {
+  align-content: inline;
+}
+
+.widget_blog_subscription {
+  border-radius: 2rem;
+  border-color: red;
+  border-width: 5px;
+  display: flex;
+  margin: auto;
+  width: 60%;
+  max-width: 490px;
+  min-width: 320px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f6f6f2;
+  background-image: url(../images/banner-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.widget_blog_subscription p {
+  margin: 0;
+  text-align: end;
+}
+.widget_blog_subscription p:first-child {
+  margin: 40px 15px 0;
+  color: #f38630;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  font-family: "roboto", sans-serif;
+  letter-spacing: 1px;
+}
+.widget_blog_subscription input[type="text"] {
+  margin: 45px 30px;
+  color: #999;
+  padding: 25px 15px !important;
+  text-align: center;
+  width: 100% !important;
+  max-width: calc(100% - 90px);
+  outline: none;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.widget_blog_subscription input[type="text"]::-webkit-input-placeholder {
+  color: #69d2e7;
+}
+.widget_blog_subscription input[type="text"]:-moz-placeholder {
+  color: #69d2e7;
+}
+.widget_blog_subscription input[type="text"]::-moz-placeholder {
+  color: #69d2e7;
+}
+.widget_blog_subscription input[type="text"]:-ms-input-placeholder {
+  color: #69d2e7;
+}
+.widget_blog_subscription input[type="submit"] {
+  margin: 0%;
+  background-color: #a37878;
+  color: #fff;
+  padding: 25px 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  outline: none;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: 0.1s all ease-in-out;
+  -moz-transition: 0.1s all ease-in-out;
+  -o-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
+}
+.widget_blog_subscription input[type="submit"]:hover {
+  background-color: rgb(163, 120, 120);
+}
+
+.fondocards a {
+  box-sizing: border-box;
+  color: rgb(246, 253, 253);
+  background-color: rgb(163, 120, 120);
+  border-radius: 3rem;
+  border-width: 5rem;
+  align-items: center;
+  background-color: #a37878;
+  transition: background-color 0.5s;
+  box-sizing: content-box;
+  width: 50%;
+  border: solid #bb5f29d2 5px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+a:hover {
+  background-color: rgb(116, 108, 107);
+}
+
+.card-body {
+  text-align: end;
+  text-decoration: hotpink;
+  background-image: url(/public/images/banner-header.png);
+}
+
+.card-text {
+  text-align: center;
+  font-weight: normal;
+}
+
+.card-group h5 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.card-group img {
+  background-image: url(../images/cafemolido2.jpg);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  min-width: 350px;
+  max-height: 350px;
+}
+
+.card-group {
+  display: inline;
+  align-content: end;
+}
+
+.card-group text {
+  align-self: auto;
+}
+
+.maparesponsive iframe {
+  padding: 1px, 1px, 1px;
+  width: -webkit-fill-available;
+  border-radius: 20%;
+  border-spacing: 5px;
+  border-width: 1rem;
+  border-color: #f38630;
+}
+
+@media (min-width: 1000px) {
+  .maparesponsive iframe {
+    width: -webkit-fill-available;
+    border-radius: 20%;
+    margin-left: 10%;
+    border-spacing: 5px;
+    border-width: 1rem;
+    border-color: #f38630;
+  }
+}
+@media (min-width: 1000px) {
+  .card-group {
+    display: flex;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .formContacto {
+    color: #f6f6f2;
+    display: flex;
+    background-image: url(/images/banner-header.png);
+  }
+}

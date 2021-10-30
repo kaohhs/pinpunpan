@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/main.js"></script>
+    <title>Pin pun pan</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+ {{> header}}
+<body>
+{{!-- empieza carrousel --}}
+{{> carousel}}
+
+
+
+<!-- termina carrusel-->
+
+  
+<nav class="fondocards">
+<div class="card-group" class="md">
+    <div class="card">
+      <img src="./images/cafe.jpg" class="card-img-top" alt="cafeteria">
+      <div class="card-body">
+        <h5 class="card-title"> <a href="cafe">Nuestra cafetería</h5></a>
+        <p class="card-text">Disfrutá de nuestros exclusivos blends de café recién molido.</p>
+        
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/pastas.jpg" class="card-img-top" alt="pastas"> 
+      <div class="card-body">
+        <h5 class="card-title"><a href="pastas">Nuestras pastas</h5></a>
+        <p class="card-text">Probá nuestras deliciosas pastas caseras.</p>
+
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/compraonline.jpg" class="card-img-top" alt="onlineshopping">
+      <div class="card-body">
+        <h5 class="card-title"><a href="tienda">Tienda Online</h5></a>
+        <p class="card-text">Envío a domicilio o retiro en sucursal <em>¡Como vos elijas!</em></p>
+        
+      </div>
+    </div>
+</nav>  
+  </div>
+  <nav class="suscripcionmail">
+  <section class="container1 row-cols-lg-3 row-cols-sm-1">
+      <div class="maparesponsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167132768483!2d-58.38375908447519!3d-34.60373888045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1631296762926!5m2!1ses-419!2sar" width="350" height="450" style="border:0;" allowfullscreen="false" loading="lazy"></iframe>
+      </div>
+      </form>
+
+      
+<section class="widget widget_blog_subscription row-cols-sm-1">
+  <form  action="suscribe" method="post" accept-charset="utf-8" id="subscribe-blog">
+      <p>Suscribite a nuestro newsletter.</p>
+      <p>
+          <input type="text" name="email" style="width: 95%; padding: 1px 2px" placeholder="Ingresá tu correo" value="" id="subscribe-field">
+      </p>
+      <p>
+          <input type="submit" value="Enviar!">
+      </p>
+  </form>
+</section>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+
+<script src="/public/js/bootstrap.min.js"> </script>
+
+
+</body>
+{{> footer }}
+
+
+
+
+</html>
