@@ -1,3 +1,1 @@
 # panaderia
-# especias
-# pinpunpan
