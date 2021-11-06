@@ -39,7 +39,8 @@ app.get('/index', (req, res) => {
 
 // contenido estatico
 
-app.use(express.static('public'))
+app.use(express.static("public"))
+
 
   
  
