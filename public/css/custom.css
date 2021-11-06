@@ -19,8 +19,6 @@
 }
 
 
-
-
 .navbar-brand img {
   display: flex;
   border-radius: 3rem;
@@ -33,6 +31,7 @@
   border-radius: 1rem;
   border-color: grey;
 }
+
 
 #cardContacto  {
   justify-content: center;
