@@ -1,7 +1,10 @@
+const path = require ("path");
 const express = require('express');
 const session = require("express-session");
-
+const bodyParser = require("body-parser");
+const mysql = require('mysql');
 const { handlebars } = require('hbs');
+
 
 
 require ('dotenv').config();
@@ -21,6 +24,84 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }))
+
+
+// conexion a la base de datos
+
+
+const conn = mysql.createConnection({
+  host:'localhost',
+  user:'root',
+  password:'',
+  database: 'crud_node'
+})
+
+conn.connect((err)=>{
+  if(err) throw err;
+  console.log('conexion establecida...')
+});
+
+app.set('views', path.join(__dirname, '/views'));
+app.set('view engine', 'hbs');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+
+app.use('/assets', express.static (__dirname + '/public'));
+
+
+//Routes
+
+app.get('/' , (req,res) =>{
+  let sql = "SELECT * FROM producto";
+  let query = conn.query(sql, (err, results) => {
+      if(err) throw err;
+      res.render('productos', {
+          results: results
+      })
+          
+  })
+})
+
+// insertar
+
+app.post('/save', (req, res)=>{
+  let data = {producto_nombre: req.body.producto_nombre, producto_precio: req.body.producto_precio};
+  let sql = "INSERT INTO producto SET ? ";
+  let query = conn.query(sql, data, (err, results)=>{
+      if(err) throw err;
+      res.redirect('/');
+  })
+})
+
+// SELECT 
+app.get('/',(req, res)=>{
+  let sql ="SELECT * FROM producto";
+  let query = conn.query(sql, (err, results)=>{
+      if(err) throw err;
+      res.render('productos',{
+          results: results
+      });
+  });
+});
+// Insertar 
+app.post('/save',(req, res) => {
+  let data = {product_name: req.body.product_name, product_price: req.body.product_price};
+  let sql = "INSERT INTO product SET ?";
+  let query = conn.query(sql, data,(err, results) => {
+    if(err) throw err;
+    res.redirect('/');
+  });
+});
+
+//UPDATE
+app.post('/update',(req, res) => {
+  let sql = "UPDATE producto SET producto_nombre='"+req.body.producto_nombre+"', producto_precio='"+req.body.producto_precio+"' WHERE producto_id="+req.body.id;
+  let query = conn.query(sql, (err, results) => {
+    if(err) throw err;
+    res.redirect('/');
+  });
+});
 
 
 app.get("/", (req, res) => {
