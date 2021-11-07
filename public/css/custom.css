@@ -50,10 +50,9 @@
   color: white;
 }
 
-.formCont btn-primary {
-  color: #a37878;
-  background-color: #a37878;
-  }
+
+
+
 
 .formCont  a:hover {
   background-color: rgb(116, 108, 107);
@@ -62,7 +61,7 @@
 }
 
   
-
+/* nav bar */
 
 .navbar-brand img {
   display: flex;
@@ -77,6 +76,7 @@
   border-color: grey;
 }
 
+/*  */
 
 #cardContacto  {
   justify-content: center;
