@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require("express-session");
 const { handlebars } = require('hbs');
 
 
@@ -14,7 +15,27 @@ const { urlencoded } = require('express');
 app.use(express.json());
 app.use( express.urlencoded({extended: false}))
 
+app.use(session({
+  secret: '123456',
+  resave: true,
+  saveUninitialized: true
+}))
 
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
+app.post("/registro", (req, res) => {
+  req.session.my_variable = req.body;
+  res.redirect('/perfil')
+});
+app.get("/perfil", (req, res) => {
+  const user = req.session.my_variable;
+  delete req.session.my_variable;
+  res.render("perfil", {
+      user
+  });
+});
 
 //handlebars
 

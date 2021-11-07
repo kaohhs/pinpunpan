@@ -18,6 +18,66 @@
   
 }
 
+.formCont text {
+ text-decoration: whitesmoke;
+}
+
+.formCont {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-content: center;
+  background-image: url(/images/banner-header.png);
+  padding-left: 1rem;
+  text-decoration: whitesmoke;
+  
+}
+
+.formCont a {
+    
+    background-color: rgb(163, 120, 120);
+    transition: background-color 0.5s;
+    justify-content: space-between;
+    font-size: large;
+    color: black;
+    border-color: #746c6b;
+}
+
+.message {
+  color: whitesmoke;
+}
+
+
+.email {
+  color: whitesmoke;
+}
+
+.nombre {
+  color: whitesmoke;
+}
+
+.asunto {
+  color: whitesmoke;
+}
+
+.formCont h2 {
+  color: white;
+}
+.formCont p {
+  color: white;
+}
+
+
+
+
+
+.formCont  a:hover {
+  background-color: rgb(116, 108, 107);
+  border-color: #746c6b;
+  font-weight: bold;
+}
+
+  
+/* nav bar */
 
 .navbar-brand img {
   display: flex;
@@ -32,6 +92,7 @@
   border-color: grey;
 }
 
+/*  */
 
 #cardContacto  {
   justify-content: center;
