@@ -42,6 +42,22 @@
     border-color: #746c6b;
 }
 
+.message {
+  color: whitesmoke;
+}
+
+
+.email {
+  color: whitesmoke;
+}
+
+.nombre {
+  color: whitesmoke;
+}
+
+.asunto {
+  color: whitesmoke;
+}
 
 .formCont h2 {
   color: white;

@@ -32,7 +32,7 @@
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST" placeholder="Ingresa tu nombre">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST" >
 
                 <!--Grid row-->
                 <div class="row">
@@ -40,8 +40,8 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="" placeholder="Ingresa tu nombre">Tu nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" class="form-control">
+                            <label for="name" class="nombre">Tu nombre</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -49,8 +49,8 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">Ingresa tu correo electrónico</label>
+                            <input type="text" id="email" name="email" placeholder="Ingresa tu correo" class="form-control">
+                            <label for="email" class="email">Ingresa tu correo electrónico</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -62,8 +62,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Asunto</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Ingresa el asunto">
+                            <label for="subject" class="asunto">Asunto</label>
                         </div>
                     </div>
                 </div>
@@ -75,9 +75,9 @@
                     <!--Grid column-->
                     <div class="col-md-12">
 
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Ingresá tu mensaje</label>
+                        <div class="md-form" >
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Ingresa tu mensaje en este" ></textarea>
+                            <label  class="message" for="message">Ingresá tu mensaje</label>
                         </div>
 
                     </div>
