@@ -29,7 +29,19 @@
   background-image: url(/images/banner-header.png);
   padding-left: 1rem;
   text-decoration: whitesmoke;
+  
 }
+
+.formCont a {
+    
+    background-color: rgb(163, 120, 120);
+    transition: background-color 0.5s;
+    justify-content: space-between;
+    font-size: large;
+    color: black;
+    border-color: #746c6b;
+}
+
 
 .formCont h2 {
   color: white;
@@ -43,7 +55,11 @@
   background-color: #a37878;
   }
 
-
+.formCont  a:hover {
+  background-color: rgb(116, 108, 107);
+  border-color: #746c6b;
+  font-weight: bold;
+}
 
   
 
