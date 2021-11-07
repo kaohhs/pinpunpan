@@ -30,7 +30,8 @@
     "hbs": "^4.1.2",
     "heroku": "^7.59.1",
     "js": "^0.1.0",
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "sql": "^0.78.0"
   },
   "devDependencies": {}
 }
