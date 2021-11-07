@@ -1,11 +1,9 @@
 const path = require ("path");
 const express = require('express');
 const session = require("express-session");
-const bodyParser = require("body-parser");
-const mysql = require('mysql');
 const { handlebars } = require('hbs');
-
-
+const mysql = require('mysql');
+const bodyParser = require("body-parser");
 
 require ('dotenv').config();
 
@@ -13,19 +11,6 @@ const app = express();
 const PORT = process.env.PORT;
 const hbs = require('hbs');
 const { urlencoded } = require('express');
-
-// middlewares
-
-app.use(express.json());
-app.use( express.urlencoded({extended: false}))
-
-app.use(session({
-  secret: '123456',
-  resave: true,
-  saveUninitialized: true
-}))
-
-
 // conexion a la base de datos
 
 
@@ -41,7 +26,7 @@ conn.connect((err)=>{
   console.log('conexion establecida...')
 });
 
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.use(bodyParser.json());
@@ -103,15 +88,32 @@ app.post('/update',(req, res) => {
   });
 });
 
+// middlewares
+
+app.use(express.json());
+app.use( express.urlencoded({extended: false}))
+
+app.use(session({
+  secret: '123456',
+  resave: true,
+  saveUninitialized: true
+}))
 
 app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.post('/envio', (req, res) => {
-  console.log(req.body);
-})
-
+app.post("/registro", (req, res) => {
+  req.session.my_variable = req.body;
+  res.redirect('/perfil')
+});
+app.get("/perfil", (req, res) => {
+  const user = req.session.my_variable;
+  delete req.session.my_variable;
+  res.render("perfil", {
+      user
+  });
+});
 
 //handlebars
 

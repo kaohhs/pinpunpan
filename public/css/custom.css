@@ -79,6 +79,22 @@
   font-weight: bold;
 }
 
+
+/* form productos */
+
+.mytable  {
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-content: center;
+    background-image: url(/images/banner-header.png);
+    padding-left: 1rem;
+    text-decoration: whitesmoke;
+    
+  }
+  
+  
+
   
 /* nav bar */
 
