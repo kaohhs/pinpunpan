@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require("express-session");
+
 const { handlebars } = require('hbs');
 
 
@@ -21,21 +22,15 @@ app.use(session({
   saveUninitialized: true
 }))
 
+
 app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.post("/registro", (req, res) => {
-  req.session.my_variable = req.body;
-  res.redirect('/perfil')
-});
-app.get("/perfil", (req, res) => {
-  const user = req.session.my_variable;
-  delete req.session.my_variable;
-  res.render("perfil", {
-      user
-  });
-});
+app.post('/envio', (req, res) => {
+  console.log(req.body);
+})
+
 
 //handlebars
 
