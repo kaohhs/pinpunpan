@@ -18,6 +18,35 @@
   
 }
 
+.formCont text {
+ text-decoration: whitesmoke;
+}
+
+.formCont {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-content: center;
+  background-image: url(/images/banner-header.png);
+  padding-left: 1rem;
+  text-decoration: whitesmoke;
+}
+
+.formCont h2 {
+  color: white;
+}
+.formCont p {
+  color: white;
+}
+
+.formCont btn-primary {
+  color: #a37878;
+  background-color: #a37878;
+  }
+
+
+
+  
+
 
 .navbar-brand img {
   display: flex;
