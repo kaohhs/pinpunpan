@@ -11,6 +11,8 @@ const app = express();
 const PORT = process.env.PORT;
 const hbs = require('hbs');
 const { urlencoded } = require('express');
+
+
 // conexion a la base de datos
 
 
@@ -37,7 +39,7 @@ app.use('/assets', express.static (__dirname + '/public'));
 
 //Routes
 
-app.get('/' , (req,res) =>{
+app.get('/productos' , (req,res) =>{
   let sql = "SELECT * FROM producto";
   let query = conn.query(sql, (err, results) => {
       if(err) throw err;
@@ -48,47 +50,19 @@ app.get('/' , (req,res) =>{
   })
 })
 
-// insertar
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use('/assets', express.static(__dirname + '/public'));
+app.use ('./routes/routes.js');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
 
-app.post('/save', (req, res)=>{
-  let data = {producto_nombre: req.body.producto_nombre, producto_precio: req.body.producto_precio};
-  let sql = "INSERT INTO producto SET ? ";
-  let query = conn.query(sql, data, (err, results)=>{
-      if(err) throw err;
-      res.redirect('/');
-  })
-})
 
-// SELECT 
-app.get('/',(req, res)=>{
-  let sql ="SELECT * FROM producto";
-  let query = conn.query(sql, (err, results)=>{
-      if(err) throw err;
-      res.render('productos',{
-          results: results
-      });
-  });
-});
-// Insertar 
-app.post('/save',(req, res) => {
-  let data = {product_name: req.body.product_name, product_price: req.body.product_price};
-  let sql = "INSERT INTO product SET ?";
-  let query = conn.query(sql, data,(err, results) => {
-    if(err) throw err;
-    res.redirect('/');
-  });
-});
 
-//UPDATE
-app.post('/update',(req, res) => {
-  let sql = "UPDATE producto SET producto_nombre='"+req.body.producto_nombre+"', producto_precio='"+req.body.producto_precio+"' WHERE producto_id="+req.body.id;
-  let query = conn.query(sql, (err, results) => {
-    if(err) throw err;
-    res.redirect('/');
-  });
-});
 
-// middlewares
+
+
 
 app.use(express.json());
 app.use( express.urlencoded({extended: false}))
@@ -99,21 +73,7 @@ app.use(session({
   saveUninitialized: true
 }))
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
 
-app.post("/registro", (req, res) => {
-  req.session.my_variable = req.body;
-  res.redirect('/perfil')
-});
-app.get("/perfil", (req, res) => {
-  const user = req.session.my_variable;
-  delete req.session.my_variable;
-  res.render("perfil", {
-      user
-  });
-});
 
 //handlebars
 
