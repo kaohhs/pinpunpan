@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const router = new Router();
-const { conn } = require ('./routes');
-
-router.get ('/', usuarioGet);
+// const { conn } = require ('./routes');
+const mysql = require('mysql');
+// router.get ('/', usuarioGet);
 
 
 
@@ -18,10 +18,10 @@ const conn = mysql.createConnection({
 
   conn.connect((err) => {
     if (err) throw err;
-    console.log('Conexión establecida...')
+    console.log('Conexión establecida...');
   });
 
-router.get('/', (req, res) => {
+router.get('/productos', (req, res) => {
     let sql = "SELECT * FROM producto";
     let query = conn.query(sql, (err, results) => {
       if (err) throw err;
@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
     let sql = "INSERT INTO producto SET ?";
     let query = conn.query(sql, data, (err, results) => {
       if (err) throw err;
-      res.redirect('/');
+      res.redirect('/productos');
     });
   });
   
@@ -47,7 +47,7 @@ router.get('/', (req, res) => {
     let sql = "UPDATE producto SET producto_nombre='" + req.body.producto_nombre + "', producto_precio='" + req.body.producto_precio + "' WHERE producto_id=" + req.body.id;
     let query = conn.query(sql, (err, results) => {
       if (err) throw err;
-      res.redirect('/');
+      res.redirect('/productos');
     });
   });
   
@@ -56,7 +56,7 @@ router.get('/', (req, res) => {
     let sql = "DELETE FROM producto WHERE producto_id="+req.body.producto_id+"";
     let query = conn.query(sql, (err, results) => {
       if(err) throw err;
-        res.redirect('/');
+        res.redirect('/productos');
     });
   });
 
@@ -67,3 +67,5 @@ router.get('/contacto'), (req,res) => {
   res.render('contacto')
 }
   module.exports = router;
+
+

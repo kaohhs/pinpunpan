@@ -41,10 +41,14 @@
                     <td> {{producto_id}}</td>
                     <td> {{producto_nombre}}</td>
                     <td> {{producto_precio}}</td>
-                    <td><a href="javascript:void(0) ;" class="btn btn-info edit" data-id="{{ producto_id }}"> Editar
-                    </td></a>
-                    <td><a href="javascript:void(0) ;" class="btn btn-danger delete" data-id="{{ producto_id }}">Borrar
-                    </td></a>
+                    <td>
+                        <a href="javascript:void(0);" class="btn btn-info edit" data-id="{{ producto_id}}"
+                            data-producto_nombre="{{ producto_nombre}}" data-producto_precio="{{ producto_precio}}">
+                            Editar</a>
+
+                        <a href="javascript:void(0);" class="btn btn-danger delete" data-id="{{ producto_id}}">
+                            Borrar</a>
+                    </td>
                 </tr>
                 {{/each}}
             </tbody>
@@ -72,6 +76,36 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+<form action="/update" method="post">
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" name="producto_nombre" class="form-control producto_nombre"
+                                placeholder="Nombre producto" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="producto_precio" class="form-control producto_precio"
+                                placeholder="Precio" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="id" class="producto_id">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
@@ -124,11 +158,18 @@ $(document).ready(function(){
         let producto_precio = $(this).data('producto_precio');
         $('#EditModal').modal('show');
         $('.producto_nombre').val(producto_nombre);
-        $('.precio').val(producto_precio);
+        $('.producto_precio').val(producto_precio);
         $('.producto_id').val(producto_id);
     })
     
-})
+ $('#mytable').on('click', '.delete', function () {
+                let producto_id = $(this).data("id");
+                $('#deleteModal').modal('show');
+                $('.producto_id').val(producto_id);
+            });
+        });
+
+
 </script>
 
 
