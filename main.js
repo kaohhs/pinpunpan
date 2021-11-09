@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require("express-session");
 const { handlebars } = require('hbs');
-
+const sql = require('mysql');
 
 require ('dotenv').config();
 
