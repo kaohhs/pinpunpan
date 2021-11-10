@@ -10,27 +10,18 @@ const app = express();
 const port = process.env.PORT;
 const hbs = require('hbs');
 const { urlencoded } = require('express');
-const router = require("./routes/routes");
+const router = require("./router/router");
 
 
 // conexion a la base de datos
 
 
-const conn = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'crud_node'
-})
-
-conn.connect((err) => {
-  if (err) throw err;
-  console.log('conexion establecida...')
-});
 
 
 //settings
 app.set('views', path.join(__dirname, 'views'));
+
+
 app.set('view engine', 'hbs');
 
 
@@ -38,7 +29,9 @@ app.set('view engine', 'hbs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(express.static("public"))
+
+app.use(express.static('public'));
+app.use(require ('./router/router'));
 
 
 
@@ -102,12 +95,7 @@ app.get('/contacto', (req, res) => {
   })
 
 
-  // app.post("/registro"), (req, res) => {
 
-  //   console.log(req.body)
-  //   res.send('recibido')
-  // }
-  
 
 
 app.listen(port, () => {
