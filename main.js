@@ -42,9 +42,16 @@ app.use(require ('./router/router'));
 hbs.registerPartials(__dirname + "/views/partials/")
 
 
-app.get('/', (req, res) => {
-  res.render('index', {
+app.get('/home', (req, res) => {
+  res.render('/index', {
     titulo: 'Pin Pun Pan'
+  }
+  );
+});
+
+app.get('/index', (req, res) => {
+  res.render('index', {
+    
   }
   );
 });
@@ -86,13 +93,12 @@ app.get('/contacto', (req, res) => {
     res.render('tienda');
 
 
-  })
-
-  app.get('*', (req, res) => {
+   })
+    app.get('*', (req, res) => {
     res.render('404');
 
 
-  })
+   })
 
 
 
