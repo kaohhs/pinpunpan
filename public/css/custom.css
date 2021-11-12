@@ -18,74 +18,7 @@
   
 }
 
-.formCont text {
- text-decoration: whitesmoke;
-}
 
-.formCont {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  align-content: center;
-  background-image: url(/images/banner-header.png);
-  padding-left: 1rem;
-  text-decoration: whitesmoke;
-  
-}
-
-.formCont a {
-    
-    font-weight: bold;
-    background-color: rgb(163, 120, 120);
-    transition: background-color 0.5s;
-    justify-content: space-between;
-    font-size: large;
-    color: whitesmoke;
-    border-color: #746c6b;
-    
-}
-
-.message {
-  color: whitesmoke;
-  text-decoration: bold;
-}
-
-
-.email {
-  color: whitesmoke;
-}
-
-.nombre {
-  color: whitesmoke;
-}
-
-.asunto {
-  color: whitesmoke;
-}
-
-.formCont h2 {
-  color: white;
-}
-.formCont p {
-  color: white;
-}
-
-
-
-
-
-.formCont  a:hover {
-  background-color: rgb(116, 108, 107);
-  border-color: #746c6b;
-  font-weight: bold;
-}
-
-
-/* form productos */
-
-  
-
-  
-/* nav bar */
 
 .navbar-brand img {
   display: flex;
@@ -93,14 +26,23 @@
   border-color: lawngreen;
   background-size: contain;
   flex-wrap: wrap-reverse;
+  
+}
+
+
+.navbarHome {
+  flex-direction: row;
+  ;
 }
 
 .navbarHome img {
+  align-self: flex-end;
   border-radius: 1rem;
   border-color: grey;
-}
+  width: 300px;
+  height: 300px;
 
-/*  */
+}
 
 #cardContacto  {
   justify-content: center;
@@ -151,8 +93,10 @@ header .navbarHome {
   font-weight: bold;
   lighting-color: blue;
   font-size: 25px;
-  align-content: flex-end;
   padding: 15px;
+  
+  
+  
   
   
 }
@@ -183,6 +127,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 2px;
+  text-decoration-color: whitesmoke;
 }
 
 .carousel-inner img {
@@ -195,7 +140,10 @@ body {
   height: 200px;
 }
 
+
+
 footer {
+  
   font-weight: bold;
   padding-top: 50px;
   text-align: end;
@@ -492,5 +440,5 @@ a:hover {
 }
 
 .footer {
-  text-align: center;
+text-align: center;
 }
