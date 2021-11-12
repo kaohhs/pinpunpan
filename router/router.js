@@ -52,11 +52,6 @@ router.get('/contacto', (req, res) => {
 
 })
 
-// router.get('/productos', (req, res) => {
-//     res.render('productos');
-
-
-//})
 
 router.get('/rrss', (req, res) => {
     res.render('rrss');
