@@ -24,9 +24,9 @@
 
 
 
-    <div class="container p-4" class="formProductos">
+    <div class="container p-4 bg-secondary text-white bg-opacity-75 " class="formProductos">
         <h2> Lista productos</h2>
-        <button class="btn btn-primary" data-toggle="modal" data-target="#myModalAdd">Añadir</button>
+        <button class="btn btn-primary " data-toggle="modal" data-target="#myModalAdd">Añadir</button>
         <table class="table table-striped" id="mytable">
             <thead>
                 <th> Producto id</th>
@@ -83,7 +83,7 @@
         </div>
     </form>
     <form action="/update" method="post">
-        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -137,8 +137,10 @@
     </form>
 
 
-    <script src="/js/jquery-3.3.1.js"></script>
-    <script src="/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
     <script>
@@ -156,8 +158,9 @@
 
             $('#mytable').on('click', '.delete', function () {
                 let producto_id = $(this).data("id");
-                $('#deleteModal').modal('show');
+                $('#DeleteModal').modal('show');
                 $('.producto_id').val(producto_id);
+                
             });
         });
 
@@ -166,9 +169,6 @@
 
 </body>
 
-{{> footer }}
-
-
-
+    {{> footer }}
 
 </html>

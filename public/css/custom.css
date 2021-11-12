@@ -490,3 +490,7 @@ a:hover {
     background-image: url(/images/banner-header.png);
   }
 }
+
+.footer {
+  text-align: center;
+}
