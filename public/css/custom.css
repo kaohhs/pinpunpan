@@ -20,18 +20,22 @@
 
 
 
-
 .navbar-brand img {
   display: flex;
   border-radius: 3rem;
   border-color: lawngreen;
   background-size: contain;
   flex-wrap: wrap-reverse;
+  
 }
 
 .navbarHome img {
+  align-self: flex-end;
   border-radius: 1rem;
   border-color: grey;
+  width: 200px;
+  height: 200px;
+
 }
 
 #cardContacto  {
@@ -83,8 +87,10 @@ header .navbarHome {
   font-weight: bold;
   lighting-color: blue;
   font-size: 25px;
-  align-content: flex-end;
   padding: 15px;
+  
+  
+  
   
   
 }
