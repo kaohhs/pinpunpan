@@ -29,12 +29,18 @@
   
 }
 
+
+.navbarHome {
+  flex-direction: row;
+  ;
+}
+
 .navbarHome img {
   align-self: flex-end;
   border-radius: 1rem;
   border-color: grey;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
 
 }
 
@@ -121,6 +127,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 2px;
+  text-decoration-color: whitesmoke;
 }
 
 .carousel-inner img {
@@ -133,7 +140,10 @@ body {
   height: 200px;
 }
 
+
+
 footer {
+  
   font-weight: bold;
   padding-top: 50px;
   text-align: end;

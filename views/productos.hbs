@@ -24,22 +24,22 @@
 
 
 
-    <div class="container p-4 bg-secondary text-white bg-opacity-75 " class="formProductos">
+    <div class="container p-4 bg-secondary  text-color-white bg-opacity-50 " id="formProductos">
         <h2> Lista productos</h2>
         <button class="btn btn-primary " data-toggle="modal" data-target="#myModalAdd">Añadir</button>
         <table class="table table-striped" id="mytable">
             <thead>
-                <th> Producto id</th>
-                <th> Producto nombre</th>
-                <th> Precio</th>
-                <th> Accion</th>
+                <th><font color="white">Producto id</font></th>
+                <th><font color="white">Producto nombre</font></th>
+                <th><font color="white">Precio</font></th>
+                <th><font color="white">Accion</font></th>
             </thead>
             <tbody>
                 {{#each results}}
                 <tr>
-                    <td> {{producto_id}}</td>
-                    <td> {{producto_nombre}}</td>
-                    <td> {{producto_precio}}</td>
+                    <td><font color="white"> {{producto_id}} </font> </td>
+                    <td><font color="white">{{producto_nombre}}</font></td>
+                    <td><font color="white"> {{producto_precio}}</font> </td>
                     <td>
                         <a href="javascript:void(0);" class="btn btn-info edit" data-id="{{ producto_id}}"
                             data-producto_nombre="{{ producto_nombre}}" data-producto_precio="{{ producto_precio}}">
