@@ -34,16 +34,19 @@
 
 .formCont a {
     
+    font-weight: bold;
     background-color: rgb(163, 120, 120);
     transition: background-color 0.5s;
     justify-content: space-between;
     font-size: large;
-    color: black;
+    color: whitesmoke;
     border-color: #746c6b;
+    
 }
 
 .message {
   color: whitesmoke;
+  text-decoration: bold;
 }
 
 
@@ -75,6 +78,11 @@
   border-color: #746c6b;
   font-weight: bold;
 }
+
+
+/* form productos */
+
+  
 
   
 /* nav bar */
@@ -481,4 +489,8 @@ a:hover {
     display: flex;
     background-image: url(/images/banner-header.png);
   }
+}
+
+.footer {
+  text-align: center;
 }
