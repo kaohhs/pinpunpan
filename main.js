@@ -2,15 +2,9 @@ const path = require("path");
 const express = require('express');
 const session = require("express-session");
 const { handlebars } = require('hbs');
-<<<<<<< HEAD
 const sql = require('mysql');
 
 require ('dotenv').config();
-=======
-const mysql = require('mysql');
-
-require('dotenv').config();
->>>>>>> 3537b8e31e29bd1cd615438bea9f8166196f22c2
 
 const app = express();
 const port = process.env.PORT;
