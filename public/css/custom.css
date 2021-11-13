@@ -19,19 +19,30 @@
 }
 
 
+
 .navbar-brand img {
   display: flex;
   border-radius: 3rem;
   border-color: lawngreen;
   background-size: contain;
   flex-wrap: wrap-reverse;
+  
+}
+
+
+.navbarHome {
+  flex-direction: row;
+  ;
 }
 
 .navbarHome img {
+  align-self: flex-end;
   border-radius: 1rem;
   border-color: grey;
-}
+  width: 450px;
+  height: 300px;
 
+}
 
 #cardContacto  {
   justify-content: center;
@@ -82,8 +93,10 @@ header .navbarHome {
   font-weight: bold;
   lighting-color: blue;
   font-size: 25px;
-  align-content: flex-end;
   padding: 15px;
+  
+  
+  
   
   
 }
@@ -114,6 +127,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 2px;
+  text-decoration-color: whitesmoke;
 }
 
 .carousel-inner img {
@@ -126,7 +140,10 @@ body {
   height: 200px;
 }
 
+
+
 footer {
+  
   font-weight: bold;
   padding-top: 50px;
   text-align: end;
@@ -420,4 +437,8 @@ a:hover {
     display: flex;
     background-image: url(/images/banner-header.png);
   }
+}
+
+.footer {
+text-align: center;
 }

@@ -1,34 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/main.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/custom.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Contacto</title>
-    
- 
+
+
 </head>
+
 <body>
     {{> header }}
 
-<div>
-    {{> carousel}}
-</div>
+    <div>
+        {{> carousel}}
+    </div>
 
-<<<<<<< HEAD
+    <section class="formCont" class="">
+
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Contactanos!</h2>
+        <!--Section description-->
+        <p class="text-center w-responsive mx-auto mb-5">Consultas? Sugerencias? Reclamos? ¡Estamos para ayudarte!.</p>
+
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form id="contact-form" name="contact-form" action="/envio" method="POST">
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre"
+                                    class="form-control">
+                                <label for="nombre" class="nombre"></label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="email" name="email" placeholder="Ingresa tu correo"
+                                    class="form-control">
+                                <label for="email" class="email"></label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="asunto" name="asunto" class="form-control"
+                                    placeholder="Ingresa el asunto">
+                                <label for="asunto" class="asunto"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+
 
     
-=======
-<form action=""></form>
->>>>>>> a86407cc0d009b4523d8d63cd3a21080c5d8c86f
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                <textarea type="text" id="mensaje" name="mensaje" rows="2"
+                                    class="form-control md-textarea"
+                                    placeholder="Ingresa tu mensaje en este campo"></textarea>
+                                <label class="mensaje" for="mensaje"></label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                </form>
+
+                <div class="text-center text-md-left">
+                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
+                </div>
+                <div class="status"></div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0">
+                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p>Calle Falsa 123 </p>
+                    </li>
+
+                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                        <p>+ 03 03 456</p>
+                    </li>
+
+                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                        <p>info@pinpunpan.com.ar</p>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+        </div>
+
+    </section>
+    <!--Section: Contact v.2-->
+
 </body>
 
 {{> footer }}
 
+
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../public/js/bootstrap.bundle.js">
+<link rel="stylesheet" href="../public/css/bootstrap.css">
 </html>

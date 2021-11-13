@@ -1,30 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/main.js"></script>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Nuestros Productos</title>
-    
- 
+
+
 </head>
+
 <body>
     {{> header }}
 
-<div>
-    {{> carousel}}
-</div>
+    <div>
+        {{> carousel}}
+    </div>
 
-    
+
+
+    <div class="container p-4 bg-secondary  text-color-white bg-opacity-50 " id="formProductos">
+        <h2> Lista productos</h2>
+        <button class="btn btn-primary " data-toggle="modal" data-target="#myModalAdd">Añadir</button>
+        <table class="table table-striped" id="mytable">
+            <thead>
+                <th><font color="white">Producto id</font></th>
+                <th><font color="white">Producto nombre</font></th>
+                <th><font color="white">Precio</font></th>
+                <th><font color="white">Accion</font></th>
+            </thead>
+            <tbody>
+                {{#each results}}
+                <tr>
+                    <td><font color="white"> {{producto_id}} </font> </td>
+                    <td><font color="white">{{producto_nombre}}</font></td>
+                    <td><font color="white"> {{producto_precio}}</font> </td>
+                    <td>
+                        <a href="javascript:void(0);" class="btn btn-info edit" data-id="{{ producto_id}}"
+                            data-producto_nombre="{{ producto_nombre}}" data-producto_precio="{{ producto_precio}}">
+                            Editar</a>
+
+                        <a href="javascript:void(0);" class="btn btn-danger delete" data-id="{{ producto_id}}">
+                            Borrar</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <!-- Add New Product Modal-->
+    <form action="/save" method="post">
+        <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Añadir producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" name="producto_nombre" class="form-control"
+                                placeholder="Nombre producto">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="producto_precio" class="form-control" placeholder="Precio">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form action="/update" method="post">
+        <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" name="producto_nombre" class="form-control producto_nombre"
+                                placeholder="Nombre producto" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="producto_precio" class="form-control producto_precio"
+                                placeholder="Precio" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="id" class="producto_id">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form id="add-row-form" action="/delete" method="post">
+        <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Borrar producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>¿Desea eliminar este dato?</strong>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="producto_id" class="form-control producto_id" required>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-success">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            //Mostrar datos al modal para editar registro
+            $('#mytable').on('click', '.edit', function () {
+                let producto_id = $(this).data('id');
+                let producto_nombre = $(this).data('producto_nombre');
+                let producto_precio = $(this).data('producto_precio');
+                $('#EditModal').modal('show');
+                $('.producto_nombre').val(producto_nombre);
+                $('.producto_precio').val(producto_precio);
+                $('.producto_id').val(producto_id);
+            })
+
+            $('#mytable').on('click', '.delete', function () {
+                let producto_id = $(this).data("id");
+                $('#DeleteModal').modal('show');
+                $('.producto_id').val(producto_id);
+                
+            });
+        });
+
+
+</script>
+
 </body>
 
-{{> footer }}
-
+    {{> footer }}
 
 </html>
