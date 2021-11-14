@@ -132,7 +132,7 @@ router.get('/contacto', (req, res) => {
 
 router.post("/envio", (req, res) => {
     const nombre = req.body.nombre;
-    const apellido = req.body.apellidp;
+    const apellido = req.body.apellido;
     const email = req.body.email;
     const asunto = req.body.asunto;
     const mensaje = req.body.mensaje;
@@ -142,8 +142,8 @@ router.post("/envio", (req, res) => {
         host: 'smtp.ethereal.email',
         port: 587,
         auth: {
-            user: 'kamren.goodwin78@ethereal.email',
-            pass: 'NQZEdm9u2gtG9N6sdm'
+            user: 'birdie.lakin43@ethereal.email',
+            pass: 'PHve4ggMK7bZxG9qdN'
         }
     });
     const mailOptions = {
@@ -159,6 +159,7 @@ router.post("/envio", (req, res) => {
         } else {
             console.log("Email enviado")
             res.status(200).jsonp(reqbody);
+            res.redirect("/enviado");
         }
     });
 });
