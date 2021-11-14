@@ -15,7 +15,7 @@ const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'crud_node'
+    database: 'MarceloFernandez'
 })
 
 
