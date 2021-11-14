@@ -31,7 +31,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(require ('./router/router'));
 
-
+// fetch("https://coffee.alexflipnote.dev/");
+//   .then(response => response.json())
+//   .then(json => console.log(json));
 
 
 
