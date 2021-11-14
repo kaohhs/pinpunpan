@@ -18,7 +18,10 @@
   
 }
 
-
+input::placeholder {
+  color: #746c6b;
+  font-size: 1.2em;
+}
 
 .navbar-brand img {
   display: flex;
@@ -70,7 +73,7 @@
   align-items: flex-start;
   size: 1rem;
   text-align-last: center;
-  border-color: royalblue;
+  border-color: #746c6b;
   border-width: 2%;
   border: solid 15px;
   border-radius: 1rem;
@@ -91,7 +94,7 @@
 header .navbarHome {
   font: bold;
   font-weight: bold;
-  lighting-color: blue;
+  lighting-color: #746c6b;
   font-size: 25px;
   padding: 15px;
   
@@ -111,7 +114,7 @@ header text {
 }
 
 a:hover {
-  background-color: rgb(116, 108, 107);
+  background-color: #746c6b;
 }
 
 .navbar-var {
@@ -307,7 +310,7 @@ footer {
 }
 .widget_blog_subscription input[type="text"] {
   margin: 45px 30px;
-  color: #999;
+  color: #746c6b;
   padding: 25px 15px !important;
   text-align: center;
   width: 100% !important;
@@ -318,16 +321,16 @@ footer {
   font-size: 16px;
 }
 .widget_blog_subscription input[type="text"]::-webkit-input-placeholder {
-  color: #69d2e7;
+  color: #746c6b;
 }
 .widget_blog_subscription input[type="text"]:-moz-placeholder {
-  color: #69d2e7;
+  color: #746c6b;
 }
 .widget_blog_subscription input[type="text"]::-moz-placeholder {
-  color: #69d2e7;
+  color: #746c6b;
 }
 .widget_blog_subscription input[type="text"]:-ms-input-placeholder {
-  color: #69d2e7;
+  color: #746c6b;
 }
 .widget_blog_subscription input[type="submit"] {
   margin: 0%;

@@ -29,6 +29,7 @@ conn.connect((err) => {
 // RUTAS
 
 
+
 router.get('/', (req, res) => {
     res.render('index', {
 
@@ -123,46 +124,46 @@ router.post('/delete', (req, res) => {
 
 
 
-//Envio de mail
+   //Envio de mail
 
-router.get('/contacto', (req, res) => {
-    res.render('contacto');
-});
-
-
-router.post("/envio", (req, res) => {
-    const nombre = req.body.nombre;
-    const apellido = req.body.apellido;
-    const email = req.body.email;
-    const asunto = req.body.asunto;
-    const mensaje = req.body.mensaje;
-
-
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        auth: {
-            user: 'birdie.lakin43@ethereal.email',
-            pass: 'PHve4ggMK7bZxG9qdN'
-        }
+   router.get('/contacto', (req, res) => {
+      res.render('contacto');
     });
-    const mailOptions = {
-        from: "Remitente",
-        to: "naranjaspintdas@gmail.com",
-        subject: `${asunto}`,
-        html: `<h1>Consulta de ${nombre} sobre ${mensaje}. Responder a ${email}</h1>`,
-    };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            res.status(500).send(error.message);
-        } else {
-            console.log("Email enviado")
-            res.status(200).jsonp(reqbody);
-            res.redirect("/enviado");
-        }
+
+   router.post("/envio", (req, res) => {
+        const nombre = req.body.nombre;
+        const apellido = req.body.apellido;
+        const email = req.body.email;
+        const asunto = req.body.asunto;
+        const mensaje = req.body.mensaje;
+
+
+        const transporter = nodemailer.createTransport({
+            host: 'smtp.ethereal.email',
+            port: 587,
+            auth: {
+                user: 'birdie.lakin43@ethereal.email',
+                pass: 'PHve4ggMK7bZxG9qdN'
+            }
+        });
+        const mailOptions = {
+            from: "Remitente",
+            to: "naranjaspintdas@gmail.com",
+            subject: `${asunto}`,
+            html: `<h1>Consulta de ${nombre} sobre ${mensaje}. Responder a ${email}</h1>`,
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                res.status(500).send(error.message);
+            } else {
+                console.log("Email enviado")
+                res.status(200).jsonp(reqbody);
+                res.redirect("/enviado");
+            }
+        });
     });
-});
 
 
 router.get('*', (req, res) => {
