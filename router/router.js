@@ -15,7 +15,7 @@ const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'crud_node'
+    database: 'marcelofernandez'
 })
 
 
@@ -27,6 +27,7 @@ conn.connect((err) => {
 
 
 // RUTAS
+
 
 
 router.get('/', (req, res) => {
@@ -123,45 +124,46 @@ router.post('/delete', (req, res) => {
 
 
 
-//Envio de mail
+   //Envio de mail
 
-router.get('/contacto', (req, res) => {
-    res.render('contacto');
-});
-
-
-router.post("/envio", (req, res) => {
-    const nombre = req.body.nombre;
-    const apellido = req.body.apellidp;
-    const email = req.body.email;
-    const asunto = req.body.asunto;
-    const mensaje = req.body.mensaje;
-
-
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        auth: {
-            user: 'kamren.goodwin78@ethereal.email',
-            pass: 'NQZEdm9u2gtG9N6sdm'
-        }
+   router.get('/contacto', (req, res) => {
+      res.render('contacto');
     });
-    const mailOptions = {
-        from: "Remitente",
-        to: "naranjaspintdas@gmail.com",
-        subject: `${asunto}`,
-        html: `<h1>Consulta de ${nombre} sobre ${mensaje}. Responder a ${email}</h1>`,
-    };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            res.status(500).send(error.message);
-        } else {
-            console.log("Email enviado")
-            res.status(200).jsonp(reqbody);
-        }
+
+   router.post("/envio", (req, res) => {
+        const nombre = req.body.nombre;
+        const apellido = req.body.apellido;
+        const email = req.body.email;
+        const asunto = req.body.asunto;
+        const mensaje = req.body.mensaje;
+
+
+        const transporter = nodemailer.createTransport({
+            host: 'smtp.ethereal.email',
+            port: 587,
+            auth: {
+                user: 'birdie.lakin43@ethereal.email',
+                pass: 'PHve4ggMK7bZxG9qdN'
+            }
+        });
+        const mailOptions = {
+            from: "Remitente",
+            to: "naranjaspintdas@gmail.com",
+            subject: `${asunto}`,
+            html: `<h1>Consulta de ${nombre} sobre ${mensaje}. Responder a ${email}</h1>`,
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                res.status(500).send(error.message);
+            } else {
+                console.log("Email enviado")
+                res.status(200).jsonp(reqbody);
+                res.redirect("/enviado");
+            }
+        });
     });
-});
 
 
 router.get('*', (req, res) => {
