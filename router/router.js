@@ -74,6 +74,10 @@ router.get('/cafe', (req, res) => {
 
 router.get('/tienda', (req, res) => {
     res.render('tienda');
+})
+
+router.get('/enviado', (req, res) => {
+    res.render('enviado');
 
 
 })
@@ -149,7 +153,7 @@ router.post('/delete', (req, res) => {
           });
         const mailOptions = {
             from: "Remitente",
-            to: "naranjaspintdas@gmail.com",
+            to: "naranjaspintadas@gmail.com",
             subject: `${asunto}`,
             html: `<h1>Consulta de ${nombre} sobre ${mensaje}. Responder a ${email}</h1>`,
         };
@@ -158,9 +162,9 @@ router.post('/delete', (req, res) => {
             if (error) {
                 res.status(500).send(error.message);
             } else {
-                console.log("Email enviado")
+                res.redirect('/enviado');
                 res.status(200).jsonp(reqbody);
-                res.redirect("/enviado");
+                
             }
         });
     });
