@@ -74,6 +74,10 @@ router.get('/cafe', (req, res) => {
 
 router.get('/tienda', (req, res) => {
     res.render('tienda');
+})
+
+router.get('/enviado', (req, res) => {
+    res.render('enviado');
 
 
 })
@@ -139,28 +143,28 @@ router.post('/delete', (req, res) => {
         const mensaje = req.body.mensaje;
 
 
-        const transporter = nodemailer.createTransport({
-            host: 'smtp.ethereal.email',
-            port: 587,
+        const transport = nodemailer.createTransport({
+            host: "smtp.mailtrap.io",
+            port: 2525,
             auth: {
-                user: 'birdie.lakin43@ethereal.email',
-                pass: 'PHve4ggMK7bZxG9qdN'
+              user: "cc5c3bb782a3b2",
+              pass: "685826181e853a"
             }
-        });
+          });
         const mailOptions = {
             from: "Remitente",
-            to: "naranjaspintdas@gmail.com",
+            to: "naranjaspintadas@gmail.com",
             subject: `${asunto}`,
             html: `<h1>Consulta de ${nombre} sobre ${mensaje}. Responder a ${email}</h1>`,
         };
 
-        transporter.sendMail(mailOptions, (error, info) => {
+        transport.sendMail(mailOptions, (error, info) => {
             if (error) {
                 res.status(500).send(error.message);
             } else {
-                console.log("Email enviado")
+                res.redirect('/enviado');
                 res.status(200).jsonp(reqbody);
-                res.redirect("/enviado");
+                
             }
         });
     });
