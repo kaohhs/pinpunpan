@@ -69,6 +69,9 @@ router.get('/pastas', (req, res) => {
 router.get('/cafe', (req, res) => {
     res.render('cafe');
 
+// fetch('http://5fc82e232af77700165ad172.mockapi.io/api/products')
+// .then(response => response.json())
+// .then(data => console.log(data));
 
 })
 
@@ -81,6 +84,18 @@ router.get('/enviado', (req, res) => {
 
 
 })
+
+
+// Suscripcion 
+router.post('/suscribe', (req, res) => {
+    let data = { email: req.body.email, }
+    let sql = "INSERT INTO suscriptos SET ?";
+    let query = conn.query(sql, data, (err, results) => {
+        if (err) throw err;
+        res.redirect('/enviado');
+    });
+});
+
 
 
 
