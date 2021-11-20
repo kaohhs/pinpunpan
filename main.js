@@ -13,9 +13,6 @@ const { urlencoded } = require('express');
 const router = require("./router/router");
 
 
-// conexion a la base de datos
-
-
 
 
 //settings
@@ -37,6 +34,7 @@ app.use(require ('./router/router'));
 
 
 
+    
 // //handlebars
 
 

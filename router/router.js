@@ -91,6 +91,18 @@ router.post('/suscribe', (req, res) => {
     });
 });
 
+// Suscripcion 
+router.post('/suscribe', (req, res) => {
+    let data = { email: req.body.email, }
+    let sql = "INSERT INTO suscriptos SET ?";
+    let query = conn.query(sql, data, (err, results) => {
+        if (err) throw err;
+        res.redirect('/enviado');
+    });
+});
+
+
+
 
 
 
