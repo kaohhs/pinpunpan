@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-content: center;
   text-align: center;
+  backface-visibility: hidden;
 
 }
 
@@ -20,9 +21,30 @@
   justify-content: center;
 }
 
-.containergrid {
-justify-self: center;
+.containergrid  {
+  color: antiquewhite;
+  
 }
+
+.containergrid {
+  padding-top: 1%;
+  border-radius: 15px;
+  
+}
+
+.containergrid img {
+  border-width: 13%;
+  border-color: #a37878;
+  border-radius: 15px;
+  
+  
+}
+
+.containergrid h3 {
+  text-decoration: underline;
+}
+
+.containergrid 
 
 
 #container404 h1 {
@@ -466,4 +488,29 @@ a:hover {
 
 .footer {
 text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .containergrid article {
+    background-color: #746c6b;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+
+    
+    }
+  
+}
+
+@media (min-width: 1000px) {
+  .containergrid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: space-between;
+    justify-self: center;
+
+    
+    
+    }
 }
