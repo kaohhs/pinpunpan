@@ -69,9 +69,6 @@ router.get('/pastas', (req, res) => {
 router.get('/cafe', (req, res) => {
     res.render('cafe');
 
-// fetch('http://5fc82e232af77700165ad172.mockapi.io/api/products')
-// .then(response => response.json())
-// .then(data => console.log(data));
 
 })
 

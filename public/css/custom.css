@@ -4,9 +4,31 @@
   box-sizing: border-box;
 }
 
+
+.containergrid article {
+  background-color: #746c6b;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+
+}
+
+.containergrid   {
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.containergrid {
+justify-self: center;
+}
+
+
 #container404 h1 {
   display: center;
   text-align: center;
+
   
   color: white;
   border-width: 2%;
