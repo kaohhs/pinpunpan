@@ -14,7 +14,6 @@ const router = require("./router/router");
 
 
 
-
 //settings
 app.set('views', path.join(__dirname, 'views'));
 
@@ -28,9 +27,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(require ('./router/router'));
 
-// fetch ("https://coffee.alexflipnote.dev/random.json")
-//    .then(response => response.json())
-//    .then(json => console.log(json));
+//  fetch("https://619967319022ea0017a7ae59.mockapi.io/Pastas")
+//   .then(response => response.json())
+//   .then(json => console.log(json));
 
 
 
