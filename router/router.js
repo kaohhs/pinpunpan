@@ -72,9 +72,13 @@ router.get('/cafe', (req, res) => {
 
 })
 
-router.get('/tienda', (req, res) => {
-    res.render('tienda');
+router.get('/pastas', (req, res) => {
+    res.render('pastas');
 })
+
+router.get('/panes', (req, res) => {
+    res.render('panes');
+})  
 
 router.get('/enviado', (req, res) => {
     res.render('enviado');
