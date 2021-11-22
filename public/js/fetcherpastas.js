@@ -1,4 +1,4 @@
-const productopasta = document.getElementById("productopasta");
+const productopastas = document.getElementById("productopastas");
 const url = "https://619967319022ea0017a7ae59.mockapi.io/Pastas";
 
 
