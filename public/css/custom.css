@@ -4,6 +4,32 @@
   
 }
 
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.fa {
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 30px;
+  width: 15rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
 .containergrid article {
   background-color: #746c6b;
   justify-content: space-between;
