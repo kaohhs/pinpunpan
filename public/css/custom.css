@@ -1,12 +1,11 @@
 * {
   padding: 0px;
   margin: 0px;
-  ;
+  
 }
 
-
 .containergrid article {
-  background-color: #746c6b;  
+  background-color: #746c6b;
   justify-content: space-between;
   align-content: center;
   text-align: center;
@@ -39,6 +38,41 @@
   text-decoration: underline;
 }
 
+.productopastas article {
+  background-color: #746c6b;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.productopastas {
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.productopastas {
+  color: antiquewhite;
+}
+
+.productopastas {
+  padding-top: 1%;
+  border-radius: 15px;
+}
+
+.productopastas img {
+  border-width: 13%;
+  border-color: #a37878;
+  border-radius: 15px;
+  max-width: min-content;
+}
+
+.productopastas h3 {
+  text-decoration: underline;
+}
+
 #container404 h1 {
   display: center;
   text-align: center;
@@ -63,7 +97,6 @@
   background-color: rgb(163, 120, 120);
   margin-top: 1rem;
 }
-
 
 input::placeholder {
   color: #746c6b;
@@ -424,10 +457,11 @@ a:hover {
   padding-bottom: 1rem;
   text-decoration: #a37878;
   text-decoration: underline;
-  
 }
 
 .card-group img {
+  display: none;
+  max-height: min-content;
   background-image: url(../images/cafemolido2.jpg);
   background-repeat: no-repeat;
   object-fit: fill;
@@ -498,5 +532,13 @@ a:hover {
     display: flex;
     align-content: space-between;
     justify-self: center;
+    
+  }
+}
+
+@media (min-width: 1000px) {
+  .containergrid img {
+    max-width: 95%;
+    
   }
 }

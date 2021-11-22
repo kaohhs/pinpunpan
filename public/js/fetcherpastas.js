@@ -26,8 +26,8 @@ function loadData(data) {
         p2.innerText = el.pastadescripcion;
         p3.innerText = el.pastapresentacion;
         p4.innerText = el.pastaprecio;
-        article.append(h3, img, p1, p2, p3, p4);
-        productsContainer.appendChild(article);
+        article.append(h3, img, p1, p2, p3);
+        productopastas.appendChild(article);
         });
 }
 
