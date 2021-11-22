@@ -10,6 +10,9 @@
   align-content: center;
   text-align: center;
   backface-visibility: hidden;
+  border-radius: 15%;
+  border-color:#a37878;
+  border-width: 5px;
 }
 
 .containergrid {
@@ -537,13 +540,6 @@ a:hover {
 
 @media (min-width: 1000px) {
   .containergrid img {
-    max-width: 95%;
-    
-  }
-}
-
-@media (min-width: 1000px) {
-  .containergrid bg {
-    opacity: 75%;
+    max-width: 95%
   }
 }
