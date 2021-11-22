@@ -1,8 +1,9 @@
 const productopasta = document.getElementById("productopasta");
-const urlpasta = "https://619967319022ea0017a7ae59.mockapi.io/Pastas";
+const url = "https://619967319022ea0017a7ae59.mockapi.io/Pastas";
 
-async function fetchData(urlpasta) {
-    const res = await fetch(urlpasta);
+
+async function fetchData(url) {
+    const res = await fetch(url);
     const data = await res.json();
     loadData(data);
 }
@@ -30,4 +31,4 @@ function loadData(data) {
         });
 }
 
-fetchData(urlpasta);
+fetchData(url);
