@@ -140,7 +140,7 @@ input::placeholder {
 }
 
 #card-header {
-  display: none;
+  display: flex;
 }
 
 #textosuperior a {
@@ -460,7 +460,6 @@ a:hover {
 }
 
 .card-group img {
-  display: none;
   max-height: min-content;
   background-image: url(../images/cafemolido2.jpg);
   background-repeat: no-repeat;
@@ -540,5 +539,11 @@ a:hover {
   .containergrid img {
     max-width: 95%;
     
+  }
+}
+
+@media (min-width: 1000px) {
+  .containergrid bg {
+    opacity: 75%;
   }
 }
