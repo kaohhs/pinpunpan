@@ -1,4 +1,4 @@
-const productopasta = document.getElementById("productopasta");
+const productopastas = document.getElementById("productopastas");
 const url = "https://619967319022ea0017a7ae59.mockapi.io/Pastas";
 
 
@@ -27,7 +27,7 @@ function loadData(data) {
         p3.innerText = el.pastapresentacion;
         p4.innerText = el.pastaprecio;
         article.append(h3, img, p1, p2, p3, p4);
-        productsContainer.appendChild(article);
+        productopastas.appendChild(article);
         });
 }
 
