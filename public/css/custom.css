@@ -4,6 +4,10 @@
   
 }
 
+.mensajeconfirmacion p {
+  font-size: 25px;
+}
+
 .containergrid article {
   background-color: #746c6b;
   justify-content: space-between;
