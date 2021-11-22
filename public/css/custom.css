@@ -37,7 +37,7 @@
   text-decoration: underline;
 }
 
-.containergrid #container404 h1 {
+#container404 h1 {
   display: center;
   text-align: center;
   color: white;
@@ -47,7 +47,21 @@
   box-sizing: border-box;
   border-width: 3px;
   background-color: rgb(163, 120, 120);
+  margin-top: 1rem;
 }
+
+#container404 p {
+  display: center;
+  text-align: center;
+  color: white;
+  border-width: 2%;
+  border: solid 15px;
+  border-radius: 1rem;
+  border-width: 3px;
+  background-color: rgb(163, 120, 120);
+  margin-top: 1rem;
+}
+
 
 input::placeholder {
   color: #746c6b;
