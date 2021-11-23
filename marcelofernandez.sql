@@ -38,9 +38,9 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`producto_id`, `producto_nombre`, `producto_precio`) VALUES
-(50, 'edito', 0),
-(51, 'agrego', 0),
-(52, 'Facturas x doc', 450);
+(1, 'edito', 0),
+(2, 'agrego', 0),
+(3, 'Facturas x doc', 450);
 
 -- --------------------------------------------------------
 

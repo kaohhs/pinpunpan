@@ -4,8 +4,31 @@
   
 }
 
-.mensajeconfirmacion p {
-  font-size: 25px;
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.fa {
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 30px;
+  width: 15rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+
 }
 
 .containergrid article {
@@ -14,6 +37,9 @@
   align-content: center;
   text-align: center;
   backface-visibility: hidden;
+  border-radius: 15%;
+  border-color:#a37878;
+  border-width: 5px;
 }
 
 .containergrid {
@@ -548,13 +574,6 @@ a:hover {
 
 @media (min-width: 1000px) {
   .containergrid img {
-    max-width: 95%;
-    
-  }
-}
-
-@media (min-width: 1000px) {
-  .containergrid bg {
-    opacity: 75%;
+    max-width: 95%
   }
 }
