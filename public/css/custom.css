@@ -117,14 +117,15 @@ input::placeholder {
 
 .navbarHome {
   flex-direction: column;
+  display: flex;
 }
 
 .navbarHome img {
   align-self: flex-end;
   border-radius: 1rem;
   border-color: grey;
-  width: 450px;
-  height: 300px;
+  width: auto;
+  
 }
 
 #cardContacto {
@@ -170,6 +171,7 @@ input::placeholder {
 }
 
 header .navbarHome {
+  display: flex;
   font: bold;
   font-weight: bold;
   lighting-color: #746c6b;
@@ -181,6 +183,9 @@ a {
   background-color: rgb(163, 120, 120);
   transition: background-color 0.5s;
 }
+
+
+
 
 header text {
   justify-content: space-between;
@@ -194,9 +199,11 @@ a:hover {
   justify-content: space-between;
   font-size: large;
   color: black;
+  position: fixed;
 }
 
 body {
+  display: flexbo;
   background-image: url(../images/harina.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -206,10 +213,9 @@ body {
 }
 
 .carousel-inner img {
-  display: flex;
   width: 100%;
   max-height: 460px;
-  padding-bottom: 3%;
+  padding-bottom: 4 rem;
 }
 
 .carousel-inner {
