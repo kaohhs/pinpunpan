@@ -300,8 +300,7 @@ footer {
   .card-group {
     display: flex;
     object-fit: cover;
-    min-width: none;
-    max-height: 350px;
+    
   }
 }
 
@@ -497,7 +496,6 @@ a:hover {
 }
 
 .card-group img {
-  max-height: min-content;
   background-image: url(../images/cafemolido2.jpg);
   background-repeat: no-repeat;
   object-fit: fill;
