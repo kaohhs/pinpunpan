@@ -147,10 +147,14 @@ input::placeholder {
 }
 
 .navbarHome img {
+  display: flex;
   align-self: flex-end;
   border-radius: 1rem;
-  border-color: grey;
-  width: auto;
+  
+}
+
+.navbarHome a {
+  border-radius: 1rem;
   
 }
 
@@ -240,7 +244,6 @@ body {
 
 .carousel-inner img {
   width: 100%;
-  max-height: 460px;
   padding-bottom: 4 rem;
 }
 
@@ -573,5 +576,11 @@ a:hover {
 @media (min-width: 1000px) {
   .containergrid img {
     max-width: 95%
+  }
+}
+
+@media (min-width: 1000px) {
+  .container-fluid {
+    display: inline;
   }
 }
