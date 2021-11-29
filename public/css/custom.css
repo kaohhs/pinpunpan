@@ -147,10 +147,14 @@ input::placeholder {
 }
 
 .navbarHome img {
+  display: flex;
   align-self: flex-end;
   border-radius: 1rem;
-  border-color: grey;
-  width: auto;
+  
+}
+
+.navbarHome a {
+  border-radius: 1rem;
   
 }
 
@@ -574,5 +578,11 @@ a:hover {
 @media (min-width: 1000px) {
   .containergrid img {
     max-width: 95%
+  }
+}
+
+@media (min-width: 1000px) {
+  .container-fluid {
+    display: inline;
   }
 }
