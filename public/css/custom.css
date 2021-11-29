@@ -31,6 +31,11 @@
 
 }
 
+.container-fluid {
+  text-align: end;
+  
+}
+
 .containergrid article {
   background-color: #746c6b;
   justify-content: space-between;
@@ -509,7 +514,7 @@ a:hover {
 .card-group {
   display: inline;
   align-content: end;
-  padding-top: 5%;
+  padding-top: 3px;
 }
 
 .card-group text {
