@@ -13,8 +13,8 @@ const port = process.env.PORT || 3000
 
 const conn = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: '',
+    user: 'b8a9b0eb5915f3',
+    password: 'a6b3ee69',
     database: 'marcelofernandez'
 })
 
