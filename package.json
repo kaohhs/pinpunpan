@@ -2,10 +2,10 @@
   "name": "pinpunpan",
   "version": "1.0.0",
   "description": "adelanto de proyecto sitio web full responsive",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "test": "1 2 3 probando?",
-    "start": "node main.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
