@@ -12,10 +12,10 @@ const port = process.env.PORT || 3000
 
 
 const conn = mysql.createConnection({
-    host: 'localhost',
+    host: 'us-cdbr-east-05.cleardb.net',
     user: 'b8a9b0eb5915f3',
     password: 'a6b3ee69',
-    database: 'marcelofernandez'
+    database: 'heroku_4fc35a958773cc4'
 })
 
 
