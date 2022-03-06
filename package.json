@@ -2,10 +2,10 @@
   "name": "pinpunpan",
   "version": "1.0.0",
   "description": "adelanto de proyecto sitio web full responsive",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "test": "1 2 3 probando?",
-    "start": "node main.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -23,18 +23,19 @@
   "dependencies": {
     "bootstrap": "^5.1.3",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-handlebars": "*",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
     "express-session": "^1.17.2",
     "express-sessions": "^1.0.6",
     "handlebars": "^4.7.7",
-    "hbs": "^4.1.2",
-    "heroku": "^7.59.1",
+    "hbs": "^4.2.0",
+    "heroku": "^7.59.3",
     "jquery": "^3.6.0",
     "js": "^0.1.0",
     "mysql": "^2.18.1",
-    "node-fetch": "^3.1.0",
-    "nodemailer": "^6.7.0",
+    "node": "^17.5.0",
+    "node-fetch": "^3.2.1",
+    "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
     "sql": "^0.78.0"
   },
