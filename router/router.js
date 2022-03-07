@@ -10,12 +10,18 @@ const port = process.env.PORT || 3000
 
 
 
+ const conn = mysql.createConnection({
+     host: 'us-cdbr-east-05.cleardb.net',
+     user: 'b8a9b0eb5915f3',
+     password: 'a6b3ee69',
+     database: 'heroku_4fc35a958773cc4'
+ })
 
-const conn = mysql.createConnection({
-    host: 'us-cdbr-east-05.cleardb.net',
-    user: 'b8a9b0eb5915f3',
-    password: 'a6b3ee69',
-    database: 'heroku_4fc35a958773cc4'
+const connn = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'marcelofernandez.sql'
 })
 
 
@@ -24,6 +30,7 @@ conn.connect((err) => {
     if (err) console.log(err);//throw err;
     console.log('conexion establecida...')
 });
+
 
 
 // RUTAS
