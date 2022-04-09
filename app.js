@@ -1,19 +1,14 @@
 const path = require("path");
 const express = require('express');
-const session = require("express-session");
 const { handlebars } = require('hbs');
-const sql = require('mysql');
 
 require ('dotenv').config();
 
 const app = express();
 const port = process.env.PORT;
 const hbs = require('hbs');
-const { urlencoded } = require('express');
-const router = require("./router/router");
 
-//soy un comentario
-
+  
 //settings
 app.set('views', path.join(__dirname, 'views'));
 
@@ -34,11 +29,12 @@ app.use(require ('./router/router'));
 
 
     
-// //handlebars
+ //handlebars
 
 
 hbs.registerPartials(__dirname + "/views/partials/")
 
+// Server listener
 
 app.listen(port, () => {
   console.log(`Usando el puerto http://localhost:${port}`);

@@ -87,6 +87,16 @@ router.get('/panes', (req, res) => {
     res.render('panes');
 })  
 
+router.get ('/macarons', (req, res) => {
+    res.render('macarons');
+})
+
+router.get('/panessemillas', (req, res) => {
+    res.render('panessemillas')
+})
+router.get('/panmolde', (req, res) => {
+    res.render('panmolde')
+})
 router.get('/enviado', (req, res) => {
     res.render('enviado');
 
