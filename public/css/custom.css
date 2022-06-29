@@ -238,7 +238,7 @@ a:hover {
 }
 
 body {
-  display: flexbo;
+  display: flexbox;
   background-image: url(../images/harina.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -294,13 +294,13 @@ footer {
 
 @media (min-width: 768px) {
   .card-group img {
-    display: flex;
-    background-image: url(../images/cafemolido2.jpg);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    object-fit: cover;
-    max-height: 350px;
-    min-height: 350px;
+      display: flex;
+      background-image: url(../images/cafemolido2.jpg);
+      background-repeat: no-repeat;
+      background-position: 50%;
+      object-fit: cover;
+      max-height: 350px;
+      min-height: 350px;
   }
 }
 
